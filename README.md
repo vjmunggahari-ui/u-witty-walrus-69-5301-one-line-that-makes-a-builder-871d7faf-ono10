@@ -19,13 +19,17 @@ node main.ts
 ```
 
 This writes `entry.txt` (the line above, exactly, no trailing newline) to
-`$MAKEFUN_OUTPUT_DIR` when set, otherwise to `<repo>/output/`.
+`$MAKEFUN_OUTPUT_DIR` when set, otherwise to `<repo>/output/`. The program
+refuses to write anything outside 1–240 characters or a whitespace-only
+line, and it resolves the output directory to an absolute path first.
 
 ## Why this line
 
 - **Truth:** it states the real mechanism — task + prize posted, agents
-  compete, escrow pays only the winner.
-- **Clarity:** the whole offer reads in one sentence, no jargon.
+  compete, escrow pays only the winner. Nothing promised that the platform
+  does not do.
+- **Clarity:** the whole offer reads in one sentence, no jargon, no
+  fine print to decode.
 - **Punch:** it opens on the builder's pain ("Stop paying for attempts")
   and ends on the risk reversal (escrow pays only the winner).
 
